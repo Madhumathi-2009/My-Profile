@@ -118,7 +118,7 @@ body{
     }
 
     50%{
-        transform:scale(1.05);
+        transform:scale(1.03);
     }
 }
 
@@ -131,13 +131,20 @@ body{
     position:fixed;
     top:14px;
     right:18px;
+
     padding:7px 14px;
+
     border-radius:20px;
+
     border:1px solid #ccc;
+
     background:white;
     color:#0a1931;
+
     cursor:pointer;
+
     z-index:9999;
+
     font-weight:700;
 }
 
@@ -180,10 +187,12 @@ nav{
 .links a{
     text-decoration:none;
     color:var(--blue-dark);
+
     font-size:16px;
     font-weight:700;
 
     padding:8px 16px;
+
     border-radius:999px;
 
     background:rgba(255,255,255,.8);
@@ -195,8 +204,11 @@ nav{
 
 .links a:hover{
     background:#fff;
+
     transform:translateY(-3px);
-    box-shadow:0 6px 14px rgba(0,0,0,.1);
+
+    box-shadow:
+        0 6px 14px rgba(0,0,0,.1);
 }
 
 
@@ -206,6 +218,7 @@ nav{
 
 .hero{
     margin:16px 2%;
+
     padding:90px 6%;
 
     background:linear-gradient(
@@ -215,9 +228,11 @@ nav{
     );
 
     border:3px solid #fff;
+
     border-radius:28px;
 
     display:flex;
+
     justify-content:space-between;
     align-items:center;
 
@@ -225,6 +240,7 @@ nav{
         0 14px 40px rgba(96,165,250,.18);
 
     position:relative;
+
     overflow:hidden;
 
     animation:fadeUp .8s ease;
@@ -234,12 +250,15 @@ nav{
     content:'❄️ ❄️ ❄️ ❄️ ❄️ ❄️ ❄️ ❄️ ❄️ ❄️';
 
     position:absolute;
+
     inset:0;
 
     font-size:14px;
+
     letter-spacing:24px;
 
     opacity:.07;
+
     line-height:36px;
 
     pointer-events:none;
@@ -247,13 +266,17 @@ nav{
 
 .hero-left{
     text-align:center;
+
     flex:1;
+
     z-index:1;
 }
 
 .name{
     font-size:44px;
+
     font-weight:800;
+
     color:var(--blue-dark);
 
     animation:fadeUp .8s ease;
@@ -261,8 +284,11 @@ nav{
 
 .degree{
     font-size:20px;
+
     color:#0F172A;
+
     margin-top:12px;
+
     font-weight:700;
 
     animation:fadeUp 1s ease;
@@ -270,8 +296,11 @@ nav{
 
 .tags{
     display:flex;
+
     gap:10px;
+
     justify-content:center;
+
     margin-top:18px;
 
     animation:fadeUp 1.2s ease;
@@ -279,8 +308,11 @@ nav{
 
 .tag{
     font-size:13px;
+
     padding:8px 16px;
+
     border-radius:999px;
+
     font-weight:800;
 
     box-shadow:
@@ -292,7 +324,9 @@ nav{
 }
 
 .tag:hover{
-    transform:translateY(-4px) scale(1.08);
+    transform:
+        translateY(-4px)
+        scale(1.08);
 }
 
 .t1{
@@ -329,6 +363,7 @@ nav{
     height:190px;
 
     border-radius:50%;
+
     border:5px solid #fff;
 
     background:#fff;
@@ -337,12 +372,15 @@ nav{
         0 16px 40px rgba(30,58,138,.25);
 
     display:grid;
+
     place-items:center;
 
     overflow:hidden;
+
     flex-shrink:0;
 
-    animation:float 4s ease-in-out infinite;
+    animation:
+        float 4s ease-in-out infinite;
 
     transition:.4s;
 
@@ -350,12 +388,15 @@ nav{
 }
 
 .photo-wrap:hover{
-    transform:scale(1.08) rotate(3deg);
+    transform:
+        scale(1.08)
+        rotate(3deg);
 }
 
 .photo-wrap img{
     width:100%;
     height:100%;
+
     object-fit:cover;
 }
 
@@ -366,6 +407,7 @@ nav{
 
 section{
     padding:50px 2%;
+
     text-align:center;
 }
 
@@ -373,12 +415,14 @@ section{
     padding:40px 28px;
 
     border-radius:24px;
+
     border:3px solid #fff;
 
     box-shadow:
         0 12px 32px rgba(96,165,250,.15);
 
-    animation:fadeUp .8s ease both;
+    animation:
+        fadeUp .8s ease both;
 
     transition:.4s;
 }
@@ -405,11 +449,13 @@ section{
 
 .about-text{
     max-width:760px;
+
     margin:16px auto 0;
 
     color:#334155;
 
     line-height:1.8;
+
     font-size:17px;
 }
 
@@ -428,9 +474,11 @@ section{
 
 .skills-grid{
     display:flex;
+
     gap:20px;
 
     justify-content:center;
+
     flex-wrap:wrap;
 
     margin-top:24px;
@@ -443,9 +491,11 @@ section{
     border-radius:22px;
 
     display:flex;
+
     flex-direction:column;
 
     align-items:center;
+
     justify-content:center;
 
     gap:10px;
@@ -461,7 +511,9 @@ section{
 }
 
 .skill-box:hover{
-    transform:translateY(-10px) scale(1.04);
+    transform:
+        translateY(-10px)
+        scale(1.04);
 
     box-shadow:
         0 20px 40px rgba(96,165,250,.25);
@@ -509,9 +561,11 @@ section{
 
     transition:.35s;
 
-    animation:pop .6s ease backwards;
+    animation:
+        pop .6s ease backwards;
 
     display:flex;
+
     flex-direction:column;
 }
 
@@ -524,6 +578,7 @@ section{
 
 .cert-image{
     width:100%;
+
     height:210px;
 
     object-fit:contain;
@@ -549,7 +604,9 @@ section{
 
 .cert-title{
     font-size:16px;
+
     font-weight:800;
+
     color:#1E3A8A;
 
     line-height:1.4;
@@ -559,6 +616,7 @@ section{
     margin-top:8px;
 
     font-size:13px;
+
     color:#475569;
 }
 
@@ -566,6 +624,7 @@ section{
     margin-top:5px;
 
     font-size:13px;
+
     color:#475569;
 }
 
@@ -612,12 +671,15 @@ section{
 
 .achievement h3{
     color:#1E3A8A;
+
     font-size:23px;
 }
 
 .achievement p{
     color:#334155;
+
     line-height:1.8;
+
     margin-top:10px;
 }
 
@@ -681,6 +743,7 @@ section{
     background:#fff;
 
     display:grid;
+
     place-items:center;
 
     color:#38BDF8;
@@ -696,7 +759,9 @@ section{
 }
 
 .icon:hover{
-    transform:translateY(-8px) scale(1.15);
+    transform:
+        translateY(-8px)
+        scale(1.15);
 
     background:var(--blue-dark);
 
@@ -713,10 +778,56 @@ section{
 
 .resume{
     padding:60px 8%;
+
     text-align:center;
 }
 
-.btn{
+
+/* =========================
+   RESUME BUTTONS
+========================= */
+
+.resume-buttons{
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:16px;
+
+    flex-wrap:wrap;
+
+    margin-top:18px;
+}
+
+.resume-btn{
+    width:220px !important;
+    min-width:220px !important;
+    max-width:220px !important;
+
+    height:58px !important;
+    min-height:58px !important;
+    max-height:58px !important;
+
+    box-sizing:border-box;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    padding:0 20px !important;
+
+    margin:0 !important;
+
+    border:0;
+
+    border-radius:14px;
+
     background:linear-gradient(
         135deg,
         var(--blue-dark),
@@ -725,19 +836,17 @@ section{
 
     color:#fff;
 
-    padding:16px 32px;
+    font-family:Inter,sans-serif;
 
-    border-radius:14px;
-
-    text-decoration:none;
+    font-size:16px;
 
     font-weight:800;
 
-    display:inline-block;
+    line-height:1;
 
-    margin-top:18px;
+    text-decoration:none;
 
-    font-size:16px;
+    cursor:pointer;
 
     box-shadow:
         0 10px 24px rgba(30,58,138,.3);
@@ -745,10 +854,19 @@ section{
     animation:pulse 2s infinite;
 
     transition:.3s;
+
+    appearance:none;
 }
 
-.btn:hover{
+.resume-btn:hover{
     transform:translateY(-4px);
+
+    box-shadow:
+        0 14px 30px rgba(30,58,138,.4);
+}
+
+.resume-btn:active{
+    transform:translateY(-1px);
 }
 
 
@@ -762,7 +880,9 @@ body.dark{
 
 body.dark nav{
     background:#000!important;
+
     border:1.5px solid white!important;
+
     box-shadow:0 0 12px white!important;
 }
 
@@ -772,18 +892,23 @@ body.dark .logo{
 
 body.dark .links a{
     background:#1e293b;
+
     color:#bfdbfe;
 }
 
 body.dark .hero{
     background:#000!important;
+
     border:1.5px solid white!important;
+
     box-shadow:0 0 15px white!important;
 }
 
 body.dark .hero .name{
     color:#93c5fd!important;
-    text-shadow:0 0 15px #3b82f6!important;
+
+    text-shadow:
+        0 0 15px #3b82f6!important;
 }
 
 body.dark .hero .degree{
@@ -792,8 +917,11 @@ body.dark .hero .degree{
 
 body.dark .box-card{
     background:#000!important;
+
     border:1.5px solid white!important;
-    box-shadow:0 0 12px rgba(255,255,255,.6)!important;
+
+    box-shadow:
+        0 0 12px rgba(255,255,255,.6)!important;
 }
 
 body.dark h2{
@@ -806,8 +934,11 @@ body.dark p{
 
 body.dark .skill-box{
     background:#1e293b!important;
+
     border:1.5px solid white!important;
-    box-shadow:0 0 10px rgba(255,255,255,.5)!important;
+
+    box-shadow:
+        0 0 10px rgba(255,255,255,.5)!important;
 }
 
 body.dark .skill-box b{
@@ -820,11 +951,13 @@ body.dark .skill-box i{
 
 body.dark .cert{
     background:#000!important;
+
     border:1.5px solid white!important;
 }
 
 body.dark .cert-info{
     background:#111827!important;
+
     border-top:1px solid white;
 }
 
@@ -839,6 +972,7 @@ body.dark .cert-date{
 
 body.dark .achievement{
     background:#111827!important;
+
     border:1.5px solid white!important;
 }
 
@@ -852,12 +986,15 @@ body.dark .achievement p{
 
 body.dark .achievement-highlight{
     background:#1e293b;
+
     color:#93c5fd;
 }
 
 body.dark .contact{
     background:#000!important;
+
     border:1.5px solid white!important;
+
     box-shadow:0 0 12px white!important;
 }
 
@@ -867,11 +1004,13 @@ body.dark .contact h2{
 
 body.dark .icon{
     background:#1e293b;
+
     color:#93c5fd;
 }
 
 body.dark #theme-btn{
     background:#1e293b!important;
+
     color:white!important;
 }
 
@@ -893,13 +1032,17 @@ body.dark #theme-btn{
 
     nav{
         flex-direction:column;
+
         gap:15px;
     }
 
     .links{
         display:flex;
+
         flex-wrap:wrap;
+
         justify-content:center;
+
         gap:8px;
     }
 
@@ -909,7 +1052,9 @@ body.dark #theme-btn{
 
     .hero{
         flex-direction:column;
+
         gap:30px;
+
         padding:60px 4%;
     }
 
@@ -929,6 +1074,20 @@ body.dark #theme-btn{
         grid-template-columns:1fr;
     }
 
+    .resume-buttons{
+        flex-direction:column;
+    }
+
+    .resume-buttons .resume-btn{
+        width:260px !important;
+        min-width:260px !important;
+        max-width:260px !important;
+
+        height:58px !important;
+        min-height:58px !important;
+        max-height:58px !important;
+    }
+
 }
 
 </style>
@@ -943,7 +1102,12 @@ body.dark #theme-btn{
      THEME BUTTON
 ========================= -->
 
-<button id="theme-btn" onclick="toggleTheme()">🌙</button>
+<button
+    id="theme-btn"
+    onclick="toggleTheme()"
+>
+    🌙
+</button>
 
 
 <!-- =========================
@@ -960,15 +1124,16 @@ for(let i=0;i<16;i++){
 
     s.textContent='❄️';
 
-    s.style.left=Math.random()*100+'vw';
+    s.style.left =
+        Math.random()*100+'vw';
 
-    s.style.animationDuration=
+    s.style.animationDuration =
         (9+Math.random()*6)+'s';
 
-    s.style.animationDelay=
+    s.style.animationDelay =
         Math.random()*4+'s';
 
-    s.style.fontSize=
+    s.style.fontSize =
         (10+Math.random()*6)+'px';
 
     document.body.appendChild(s);
@@ -989,15 +1154,25 @@ for(let i=0;i<16;i++){
 
     <div class="links">
 
-        <a href="#about">About</a>
+        <a href="#about">
+            About
+        </a>
 
-        <a href="#skills">Skills</a>
+        <a href="#skills">
+            Skills
+        </a>
 
-        <a href="#certs">Certifications</a>
+        <a href="#certs">
+            Certifications
+        </a>
 
-        <a href="#achievement">Achievement</a>
+        <a href="#achievement">
+            Achievement
+        </a>
 
-        <a href="#resume">Resume</a>
+        <a href="#resume">
+            Resume
+        </a>
 
     </div>
 
@@ -1017,7 +1192,8 @@ for(let i=0;i<16;i++){
         </div>
 
         <div class="degree">
-            B.Sc Data Science and AI | SDNB Vaishnav College
+            B.Sc Data Science and AI |
+            SDNB Vaishnav College
         </div>
 
         <div class="tags">
@@ -1043,36 +1219,19 @@ for(let i=0;i<16;i++){
     </div>
 
 
-    <label class="photo-wrap">
+    <!-- =========================
+         PROFILE PHOTO
+    ========================= -->
 
-        <input
-            type="file"
-            accept="image/*"
-            hidden
-            onchange="
-                let img=document.getElementById('myPic');
-                img.src=URL.createObjectURL(this.files[0]);
-                img.style.display='block';
-                document.getElementById('uploadText').style.display='none';
-            "
+    <div class="photo-wrap">
+
+        <img
+            id="myPic"
+            src="panda.jpg"
+            alt="Madhumathi Profile Avatar"
         >
 
-        <img id="myPic" style="display:none">
-
-        <span
-            id="uploadText"
-            style="
-                font-size:13px;
-                color:#60A5FA;
-                text-align:center;
-            "
-        >
-            📷<br>
-            Upload<br>
-            Photo
-        </span>
-
-    </label>
+    </div>
 
 </div>
 
@@ -1126,9 +1285,7 @@ for(let i=0;i<16;i++){
             Skills
         </h2>
 
-
         <div class="skills-grid">
-
 
             <div class="skill-box">
 
@@ -1163,6 +1320,7 @@ for(let i=0;i<16;i++){
                 <b>Data Science</b>
 
             </div>
+
 
             <div class="skill-box">
 
@@ -1207,7 +1365,6 @@ for(let i=0;i<16;i++){
 
             </div>
 
-
         </div>
 
     </div>
@@ -1236,7 +1393,7 @@ for(let i=0;i<16;i++){
         <div class="certs-grid">
 
 
-            <!-- 1. AI LITERACY -->
+            <!-- 1 -->
 
             <div class="cert">
 
@@ -1265,7 +1422,7 @@ for(let i=0;i<16;i++){
             </div>
 
 
-            <!-- 2. GENERATIVE AI -->
+            <!-- 2 -->
 
             <div class="cert">
 
@@ -1294,7 +1451,7 @@ for(let i=0;i<16;i++){
             </div>
 
 
-            <!-- 3. DATA LITERACY -->
+            <!-- 3 -->
 
             <div class="cert">
 
@@ -1323,7 +1480,7 @@ for(let i=0;i<16;i++){
             </div>
 
 
-            <!-- 4. GETTING STARTED WITH DATA -->
+            <!-- 4 -->
 
             <div class="cert">
 
@@ -1352,7 +1509,7 @@ for(let i=0;i<16;i++){
             </div>
 
 
-            <!-- 5. CYBERSECURITY -->
+            <!-- 5 -->
 
             <div class="cert">
 
@@ -1381,7 +1538,7 @@ for(let i=0;i<16;i++){
             </div>
 
 
-            <!-- 6. CYBERSECURITY FUNDAMENTALS -->
+            <!-- 6 -->
 
             <div class="cert">
 
@@ -1410,7 +1567,7 @@ for(let i=0;i<16;i++){
             </div>
 
 
-            <!-- 7. SUSTAINABILITY -->
+            <!-- 7 -->
 
             <div class="cert">
 
@@ -1439,7 +1596,7 @@ for(let i=0;i<16;i++){
             </div>
 
 
-            <!-- 8. VULNHUNT -->
+            <!-- 8 -->
 
             <div class="cert">
 
@@ -1544,7 +1701,6 @@ for(let i=0;i<16;i++){
 
     <div class="icons">
 
-
         <a
             class="icon"
             href="https://github.com/Madhumathi-2009"
@@ -1587,7 +1743,7 @@ for(let i=0;i<16;i++){
 
         <a
             class="icon"
-            href="https://www.instagram.com/c._.madhumathi/?__pwa=1"
+            href="https://www.instagram.com/c._.madhumathi/"
             target="_blank"
             title="Instagram"
         >
@@ -1613,7 +1769,6 @@ for(let i=0;i<16;i++){
             <i class="fas fa-award"></i>
         </a>
 
-
     </div>
 
 
@@ -1634,7 +1789,10 @@ for(let i=0;i<16;i++){
      RESUME
 ========================= -->
 
-<section id="resume" class="resume">
+<section
+    id="resume"
+    class="resume"
+>
 
     <div
         class="box-card"
@@ -1657,13 +1815,32 @@ for(let i=0;i<16;i++){
             Resume
         </h2>
 
-        <a
-            class="btn"
-            href="#"
-            download
-        >
-            📄 Download Resume
-        </a>
+
+        <div class="resume-buttons">
+
+            <!-- VIEW RESUME -->
+
+            <a
+                class="resume-btn"
+                href="Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                View Resume
+            </a>
+
+
+            <!-- DOWNLOAD RESUME -->
+
+            <a
+                class="resume-btn"
+                href="Resume.pdf"
+                download="Chandramouli_Madhumathi_Resume.pdf"
+            >
+                Download Resume
+            </a>
+
+        </div>
 
     </div>
 
@@ -1671,10 +1848,14 @@ for(let i=0;i<16;i++){
 
 
 <!-- =========================
-     DARK MODE SCRIPT
+     JAVASCRIPT
 ========================= -->
 
 <script>
+
+/* =========================
+   DARK MODE
+========================= */
 
 function toggleTheme(){
 

@@ -485,10 +485,10 @@ section{
 }
 
 .skill-box{
-    width:170px;
-    height:170px;
+    width:145px;
+    height:145px;
 
-    border-radius:22px;
+    border-radius:20px;
 
     display:flex;
 
@@ -498,7 +498,7 @@ section{
 
     justify-content:center;
 
-    gap:10px;
+    gap:8px;
 
     background:#fff;
 
@@ -512,7 +512,7 @@ section{
 
 .skill-box:hover{
     transform:
-        translateY(-10px)
+        translateY(-8px)
         scale(1.04);
 
     box-shadow:
@@ -520,7 +520,7 @@ section{
 }
 
 .skill-box i{
-    font-size:44px;
+    font-size:38px;
 }
 
 
@@ -1086,6 +1086,22 @@ body.dark #theme-btn{
         height:58px !important;
         min-height:58px !important;
         max-height:58px !important;
+    }
+
+
+    /* SMALLER SKILL BOXES ON MOBILE */
+
+    .skill-box{
+        width:130px;
+        height:130px;
+    }
+
+    .skill-box i{
+        font-size:34px;
+    }
+
+    .skill-box span{
+        font-size:34px !important;
     }
 
 }

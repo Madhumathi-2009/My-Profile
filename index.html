@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Madhu's Profile</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* =========================
+   THEME
+========================= */
+
+:root{
+    --blue-dark:#1E3A8A;
+    --blue-main:#60A5FA;
+    --bg:#EFF6FF;
+    --text:#0F172A;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Inter,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+
+/* =========================
+   SNOW
+========================= */
+
+.snow{
+    position:fixed;
+    top:-10px;
+    font-size:12px;
+    pointer-events:none;
+    z-index:5;
+    animation:fall linear infinite;
+    opacity:.8;
+}
+
+@keyframes fall{
+    0%{
+        transform:translateY(-10px) rotate(0deg);
+        opacity:0;
+    }
+
+    10%{
+        opacity:.8;
+    }
+
+    100%{
+        transform:translateY(100vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+@keyframes pop{
+    from{
+        opacity:0;
+        transform:scale(.7);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+@keyframes pulse{
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.05);
+    }
+}
+
+
+/* =========================
+   THEME BUTTON
+========================= */
+
+#theme-btn{
+    position:fixed;
+    top:14px;
+    right:18px;
+    padding:7px 14px;
+    border-radius:20px;
+    border:1px solid #ccc;
+    background:white;
+    color:#0a1931;
+    cursor:pointer;
+    z-index:9999;
+    font-weight:700;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav{
+    margin:16px 2%;
+    padding:20px 32px;
+
+    background:linear-gradient(
+        135deg,
+        #DBEAFE,
+        #BFDBFE
+    );
+
+    border:3px solid #fff;
+    border-radius:22px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    box-shadow:
+        0 10px 30px rgba(96,165,250,.2);
+
+    position:sticky;
+    top:16px;
+    z-index:10;
+}
+
+.logo{
+    font-weight:800;
+    color:var(--blue-dark);
+    font-size:20px;
+}
+
+.links a{
+    text-decoration:none;
+    color:var(--blue-dark);
+    font-size:16px;
+    font-weight:700;
+
+    padding:8px 16px;
+    border-radius:999px;
+
+    background:rgba(255,255,255,.8);
+
+    margin-left:16px;
+
+    transition:.3s;
+}
+
+.links a:hover{
+    background:#fff;
+    transform:translateY(-3px);
+    box-shadow:0 6px 14px rgba(0,0,0,.1);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    margin:16px 2%;
+    padding:90px 6%;
+
+    background:linear-gradient(
+        135deg,
+        #E0F2FE,
+        #DBEAFE
+    );
+
+    border:3px solid #fff;
+    border-radius:28px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    box-shadow:
+        0 14px 40px rgba(96,165,250,.18);
+
+    position:relative;
+    overflow:hidden;
+
+    animation:fadeUp .8s ease;
+}
+
+.hero::before{
+    content:'❄️ ❄️ ❄️ ❄️ ❄️ ❄️ ❄️ ❄️ ❄️ ❄️';
+
+    position:absolute;
+    inset:0;
+
+    font-size:14px;
+    letter-spacing:24px;
+
+    opacity:.07;
+    line-height:36px;
+
+    pointer-events:none;
+}
+
+.hero-left{
+    text-align:center;
+    flex:1;
+    z-index:1;
+}
+
+.name{
+    font-size:44px;
+    font-weight:800;
+    color:var(--blue-dark);
+
+    animation:fadeUp .8s ease;
+}
+
+.degree{
+    font-size:20px;
+    color:#0F172A;
+    margin-top:12px;
+    font-weight:700;
+
+    animation:fadeUp 1s ease;
+}
+
+.tags{
+    display:flex;
+    gap:10px;
+    justify-content:center;
+    margin-top:18px;
+
+    animation:fadeUp 1.2s ease;
+}
+
+.tag{
+    font-size:13px;
+    padding:8px 16px;
+    border-radius:999px;
+    font-weight:800;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,.08);
+
+    animation:pop .5s ease backwards;
+
+    transition:.3s;
+}
+
+.tag:hover{
+    transform:translateY(-4px) scale(1.08);
+}
+
+.t1{
+    background:#DDD6FE;
+    color:#5B21B6;
+    animation-delay:.2s;
+}
+
+.t2{
+    background:#FBCFE8;
+    color:#BE185D;
+    animation-delay:.3s;
+}
+
+.t3{
+    background:#A7F3D0;
+    color:#065F46;
+    animation-delay:.4s;
+}
+
+.t4{
+    background:#FED7AA;
+    color:#92400E;
+    animation-delay:.5s;
+}
+
+
+/* =========================
+   PROFILE PHOTO
+========================= */
+
+.photo-wrap{
+    width:190px;
+    height:190px;
+
+    border-radius:50%;
+    border:5px solid #fff;
+
+    background:#fff;
+
+    box-shadow:
+        0 16px 40px rgba(30,58,138,.25);
+
+    display:grid;
+    place-items:center;
+
+    overflow:hidden;
+    flex-shrink:0;
+
+    animation:float 4s ease-in-out infinite;
+
+    transition:.4s;
+
+    cursor:pointer;
+}
+
+.photo-wrap:hover{
+    transform:scale(1.08) rotate(3deg);
+}
+
+.photo-wrap img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+section{
+    padding:50px 2%;
+    text-align:center;
+}
+
+.box-card{
+    padding:40px 28px;
+
+    border-radius:24px;
+    border:3px solid #fff;
+
+    box-shadow:
+        0 12px 32px rgba(96,165,250,.15);
+
+    animation:fadeUp .8s ease both;
+
+    transition:.4s;
+}
+
+.box-card:hover{
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 18px 40px rgba(96,165,250,.2);
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-card{
+    background:linear-gradient(
+        135deg,
+        #E0F2FE,
+        #BFDBFE
+    );
+}
+
+.about-text{
+    max-width:760px;
+    margin:16px auto 0;
+
+    color:#334155;
+
+    line-height:1.8;
+    font-size:17px;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-card{
+    background:linear-gradient(
+        135deg,
+        #EFF6FF,
+        #DBEAFE
+    );
+}
+
+.skills-grid{
+    display:flex;
+    gap:20px;
+
+    justify-content:center;
+    flex-wrap:wrap;
+
+    margin-top:24px;
+}
+
+.skill-box{
+    width:170px;
+    height:170px;
+
+    border-radius:22px;
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:10px;
+
+    background:#fff;
+
+    border:3px solid #DBEAFE;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.06);
+
+    transition:.4s;
+}
+
+.skill-box:hover{
+    transform:translateY(-10px) scale(1.04);
+
+    box-shadow:
+        0 20px 40px rgba(96,165,250,.25);
+}
+
+.skill-box i{
+    font-size:44px;
+}
+
+
+/* =========================
+   CERTIFICATIONS
+========================= */
+
+.certs-card{
+    background:linear-gradient(
+        135deg,
+        #F0F9FF,
+        #E0E7FF
+    );
+}
+
+.certs-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:22px;
+
+    margin-top:28px;
+}
+
+.cert{
+    background:#fff;
+
+    border:3px solid #93C5FD;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    animation:pop .6s ease backwards;
+
+    display:flex;
+    flex-direction:column;
+}
+
+.cert:hover{
+    transform:translateY(-8px);
+
+    box-shadow:
+        0 18px 35px rgba(96,165,250,.25);
+}
+
+.cert-image{
+    width:100%;
+    height:210px;
+
+    object-fit:contain;
+
+    display:block;
+
+    background:#fff;
+
+    padding:10px;
+}
+
+.cert-info{
+    padding:16px;
+
+    text-align:left;
+
+    background:#F8FAFF;
+
+    border-top:2px solid #DBEAFE;
+
+    flex:1;
+}
+
+.cert-title{
+    font-size:16px;
+    font-weight:800;
+    color:#1E3A8A;
+
+    line-height:1.4;
+}
+
+.cert-provider{
+    margin-top:8px;
+
+    font-size:13px;
+    color:#475569;
+}
+
+.cert-date{
+    margin-top:5px;
+
+    font-size:13px;
+    color:#475569;
+}
+
+
+/* =========================
+   ACHIEVEMENT
+========================= */
+
+.achievement-card{
+    background:linear-gradient(
+        135deg,
+        #DBEAFE,
+        #E0F2FE
+    );
+}
+
+.achievement{
+    max-width:850px;
+
+    margin:28px auto 0;
+
+    background:#fff;
+
+    border:3px solid #93C5FD;
+
+    border-radius:22px;
+
+    padding:30px;
+
+    box-shadow:
+        0 12px 28px rgba(96,165,250,.15);
+
+    text-align:left;
+
+    transition:.3s;
+}
+
+.achievement:hover{
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 18px 35px rgba(96,165,250,.22);
+}
+
+.achievement h3{
+    color:#1E3A8A;
+    font-size:23px;
+}
+
+.achievement p{
+    color:#334155;
+    line-height:1.8;
+    margin-top:10px;
+}
+
+.achievement-highlight{
+    display:inline-block;
+
+    margin-top:16px;
+
+    padding:9px 16px;
+
+    border-radius:999px;
+
+    background:#DBEAFE;
+
+    color:#1E3A8A;
+
+    font-weight:800;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+    background:linear-gradient(
+        135deg,
+        #BAE6FD,
+        #7DD3FC
+    );
+
+    text-align:center;
+
+    padding:60px 8%;
+
+    margin:16px 2%;
+
+    border-radius:24px;
+
+    border:3px solid #fff;
+}
+
+.icons{
+    display:flex;
+
+    gap:16px;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    margin-top:24px;
+}
+
+.icon{
+    width:58px;
+    height:58px;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    display:grid;
+    place-items:center;
+
+    color:#38BDF8;
+
+    text-decoration:none;
+
+    font-size:22px;
+
+    box-shadow:
+        0 6px 16px rgba(0,0,0,.12);
+
+    transition:.4s;
+}
+
+.icon:hover{
+    transform:translateY(-8px) scale(1.15);
+
+    background:var(--blue-dark);
+
+    color:#fff;
+
+    box-shadow:
+        0 12px 24px rgba(30,58,138,.3);
+}
+
+
+/* =========================
+   RESUME
+========================= */
+
+.resume{
+    padding:60px 8%;
+    text-align:center;
+}
+
+.btn{
+    background:linear-gradient(
+        135deg,
+        var(--blue-dark),
+        var(--blue-main)
+    );
+
+    color:#fff;
+
+    padding:16px 32px;
+
+    border-radius:14px;
+
+    text-decoration:none;
+
+    font-weight:800;
+
+    display:inline-block;
+
+    margin-top:18px;
+
+    font-size:16px;
+
+    box-shadow:
+        0 10px 24px rgba(30,58,138,.3);
+
+    animation:pulse 2s infinite;
+
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+}
+
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark{
+    background:#000;
+}
+
+body.dark nav{
+    background:#000!important;
+    border:1.5px solid white!important;
+    box-shadow:0 0 12px white!important;
+}
+
+body.dark .logo{
+    color:#93c5fd!important;
+}
+
+body.dark .links a{
+    background:#1e293b;
+    color:#bfdbfe;
+}
+
+body.dark .hero{
+    background:#000!important;
+    border:1.5px solid white!important;
+    box-shadow:0 0 15px white!important;
+}
+
+body.dark .hero .name{
+    color:#93c5fd!important;
+    text-shadow:0 0 15px #3b82f6!important;
+}
+
+body.dark .hero .degree{
+    color:#bfdbfe!important;
+}
+
+body.dark .box-card{
+    background:#000!important;
+    border:1.5px solid white!important;
+    box-shadow:0 0 12px rgba(255,255,255,.6)!important;
+}
+
+body.dark h2{
+    color:#93c5fd!important;
+}
+
+body.dark p{
+    color:#cbd5e1!important;
+}
+
+body.dark .skill-box{
+    background:#1e293b!important;
+    border:1.5px solid white!important;
+    box-shadow:0 0 10px rgba(255,255,255,.5)!important;
+}
+
+body.dark .skill-box b{
+    color:#93c5fd!important;
+}
+
+body.dark .skill-box i{
+    color:#93c5fd!important;
+}
+
+body.dark .cert{
+    background:#000!important;
+    border:1.5px solid white!important;
+}
+
+body.dark .cert-info{
+    background:#111827!important;
+    border-top:1px solid white;
+}
+
+body.dark .cert-title{
+    color:#93c5fd!important;
+}
+
+body.dark .cert-provider,
+body.dark .cert-date{
+    color:#cbd5e1!important;
+}
+
+body.dark .achievement{
+    background:#111827!important;
+    border:1.5px solid white!important;
+}
+
+body.dark .achievement h3{
+    color:#93c5fd!important;
+}
+
+body.dark .achievement p{
+    color:#cbd5e1!important;
+}
+
+body.dark .achievement-highlight{
+    background:#1e293b;
+    color:#93c5fd;
+}
+
+body.dark .contact{
+    background:#000!important;
+    border:1.5px solid white!important;
+    box-shadow:0 0 12px white!important;
+}
+
+body.dark .contact h2{
+    color:#93c5fd!important;
+}
+
+body.dark .icon{
+    background:#1e293b;
+    color:#93c5fd;
+}
+
+body.dark #theme-btn{
+    background:#1e293b!important;
+    color:white!important;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1100px){
+
+    .certs-grid{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:800px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .links{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:8px;
+    }
+
+    .links a{
+        margin-left:0;
+    }
+
+    .hero{
+        flex-direction:column;
+        gap:30px;
+        padding:60px 4%;
+    }
+
+    .name{
+        font-size:28px;
+    }
+
+    .degree{
+        font-size:16px;
+    }
+
+    .tags{
+        flex-wrap:wrap;
+    }
+
+    .certs-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     THEME BUTTON
+========================= -->
+
+<button id="theme-btn" onclick="toggleTheme()">🌙</button>
+
+
+<!-- =========================
+     SNOW
+========================= -->
+
+<script>
+
+for(let i=0;i<16;i++){
+
+    let s=document.createElement('div');
+
+    s.className='snow';
+
+    s.textContent='❄️';
+
+    s.style.left=Math.random()*100+'vw';
+
+    s.style.animationDuration=
+        (9+Math.random()*6)+'s';
+
+    s.style.animationDelay=
+        Math.random()*4+'s';
+
+    s.style.fontSize=
+        (10+Math.random()*6)+'px';
+
+    document.body.appendChild(s);
+}
+
+</script>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+    <div class="logo">
+        ❄️ Madhu's Profile
+    </div>
+
+    <div class="links">
+
+        <a href="#about">About</a>
+
+        <a href="#skills">Skills</a>
+
+        <a href="#certs">Certifications</a>
+
+        <a href="#achievement">Achievement</a>
+
+        <a href="#resume">Resume</a>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<div class="hero">
+
+    <div class="hero-left">
+
+        <div class="name">
+            Hi, I'm Chandramouli Madhumathi
+        </div>
+
+        <div class="degree">
+            B.Sc Data Science and AI | SDNB Vaishnav College
+        </div>
+
+        <div class="tags">
+
+            <span class="tag t1">
+                Curious
+            </span>
+
+            <span class="tag t2">
+                Kind
+            </span>
+
+            <span class="tag t3">
+                Learner
+            </span>
+
+            <span class="tag t4">
+                Creative
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <label class="photo-wrap">
+
+        <input
+            type="file"
+            accept="image/*"
+            hidden
+            onchange="
+                let img=document.getElementById('myPic');
+                img.src=URL.createObjectURL(this.files[0]);
+                img.style.display='block';
+                document.getElementById('uploadText').style.display='none';
+            "
+        >
+
+        <img id="myPic" style="display:none">
+
+        <span
+            id="uploadText"
+            style="
+                font-size:13px;
+                color:#60A5FA;
+                text-align:center;
+            "
+        >
+            📷<br>
+            Upload<br>
+            Photo
+        </span>
+
+    </label>
+
+</div>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+    <div class="box-card about-card">
+
+        <h2
+            style="
+                color:var(--blue-dark);
+                font-size:32px;
+            "
+        >
+            About Me
+        </h2>
+
+        <p class="about-text">
+
+            I am a B.Sc Data Science and Artificial Intelligence
+            student at SDNB Vaishnav College. I am interested in
+            AI, Data Science and technology, and I enjoy exploring
+            new things and learning new concepts. I like building
+            useful projects and continuously improving my skills.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SKILLS
+========================= -->
+
+<section id="skills">
+
+    <div class="box-card skills-card">
+
+        <h2
+            style="
+                color:var(--blue-dark);
+                font-size:32px;
+            "
+        >
+            Skills
+        </h2>
+
+
+        <div class="skills-grid">
+
+
+            <div class="skill-box">
+
+                <i
+                    class="fab fa-python"
+                    style="color:#3776AB"
+                ></i>
+
+                <b>Python</b>
+
+            </div>
+
+
+            <div class="skill-box">
+
+                <i
+                    class="fab fa-github"
+                    style="color:#000"
+                ></i>
+
+                <b>GitHub</b>
+
+            </div>
+
+
+            <div class="skill-box">
+
+                <span style="font-size:44px">
+                    📊
+                </span>
+
+                <b>Data Science</b>
+
+            </div>
+
+            <div class="skill-box">
+
+                <span style="font-size:44px">
+                    🌐
+                </span>
+
+                <b>HTML & CSS</b>
+
+            </div>
+
+
+            <div class="skill-box">
+
+                <span style="font-size:44px">
+                    🧠
+                </span>
+
+                <b>ML Basics</b>
+
+            </div>
+
+
+            <div class="skill-box">
+
+                <span style="font-size:44px">
+                    🛡️
+                </span>
+
+                <b>Cybersecurity</b>
+
+            </div>
+
+
+            <div class="skill-box">
+
+                <span style="font-size:44px">
+                    💻
+                </span>
+
+                <b>Web Development</b>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CERTIFICATIONS
+========================= -->
+
+<section id="certs">
+
+    <div class="box-card certs-card">
+
+        <h2
+            style="
+                color:var(--blue-dark);
+                font-size:36px;
+            "
+        >
+            Certifications
+        </h2>
+
+
+        <div class="certs-grid">
+
+
+            <!-- 1. AI LITERACY -->
+
+            <div class="cert">
+
+                <img
+                    src="ai-literacy.jpeg"
+                    class="cert-image"
+                    alt="AI Literacy Certificate"
+                >
+
+                <div class="cert-info">
+
+                    <div class="cert-title">
+                        AI Literacy
+                    </div>
+
+                    <div class="cert-provider">
+                        🏢 IBM SkillsBuild
+                    </div>
+
+                    <div class="cert-date">
+                        📅 Sep 10, 2026
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 2. GENERATIVE AI -->
+
+            <div class="cert">
+
+                <img
+                    src="generative-ai.jpeg"
+                    class="cert-image"
+                    alt="Getting Started with Generative AI Certificate"
+                >
+
+                <div class="cert-info">
+
+                    <div class="cert-title">
+                        Getting Started with Generative AI
+                    </div>
+
+                    <div class="cert-provider">
+                        🏢 IBM SkillsBuild
+                    </div>
+
+                    <div class="cert-date">
+                        📅 Sep 13, 2026
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 3. DATA LITERACY -->
+
+            <div class="cert">
+
+                <img
+                    src="data-literacy.jpeg"
+                    class="cert-image"
+                    alt="Data Literacy Certificate"
+                >
+
+                <div class="cert-info">
+
+                    <div class="cert-title">
+                        Data Literacy
+                    </div>
+
+                    <div class="cert-provider">
+                        🏢 IBM SkillsBuild
+                    </div>
+
+                    <div class="cert-date">
+                        📅 Sep 06, 2026
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 4. GETTING STARTED WITH DATA -->
+
+            <div class="cert">
+
+                <img
+                    src="getting-started-data.jpeg"
+                    class="cert-image"
+                    alt="Getting Started with Data Certificate"
+                >
+
+                <div class="cert-info">
+
+                    <div class="cert-title">
+                        Getting Started with Data
+                    </div>
+
+                    <div class="cert-provider">
+                        🏢 IBM SkillsBuild
+                    </div>
+
+                    <div class="cert-date">
+                        📅 Sep 08, 2026
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 5. CYBERSECURITY -->
+
+            <div class="cert">
+
+                <img
+                    src="getting-started-cybersecurity.jpeg"
+                    class="cert-image"
+                    alt="Getting Started with Cybersecurity Certificate"
+                >
+
+                <div class="cert-info">
+
+                    <div class="cert-title">
+                        Getting Started with Cybersecurity
+                    </div>
+
+                    <div class="cert-provider">
+                        🏢 IBM SkillsBuild
+                    </div>
+
+                    <div class="cert-date">
+                        📅 Sep 13, 2026
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 6. CYBERSECURITY FUNDAMENTALS -->
+
+            <div class="cert">
+
+                <img
+                    src="cybersecurity-fundamentals.jpeg"
+                    class="cert-image"
+                    alt="Cybersecurity Fundamentals Certificate"
+                >
+
+                <div class="cert-info">
+
+                    <div class="cert-title">
+                        Cybersecurity Fundamentals
+                    </div>
+
+                    <div class="cert-provider">
+                        🏢 IBM SkillsBuild
+                    </div>
+
+                    <div class="cert-date">
+                        📅 Sep 14, 2026
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 7. SUSTAINABILITY -->
+
+            <div class="cert">
+
+                <img
+                    src="ibm-certificate.jpeg"
+                    class="cert-image"
+                    alt="Fundamentals of Sustainability and Technology Certificate"
+                >
+
+                <div class="cert-info">
+
+                    <div class="cert-title">
+                        Fundamentals of Sustainability and Technology
+                    </div>
+
+                    <div class="cert-provider">
+                        🏢 IBM SkillsBuild
+                    </div>
+
+                    <div class="cert-date">
+                        📅 Sep 02, 2026
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 8. VULNHUNT -->
+
+            <div class="cert">
+
+                <img
+                    src="vulnhunt-certificate.jpeg"
+                    class="cert-image"
+                    alt="VulnHunt 3rd Position Certificate"
+                >
+
+                <div class="cert-info">
+
+                    <div class="cert-title">
+                        VulnHunt — 3rd Position
+                    </div>
+
+                    <div class="cert-provider">
+                        🏆 SPARTANZ 3.0 2K26
+                    </div>
+
+                    <div class="cert-date">
+                        📅 Sep 26, 2026
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ACHIEVEMENT
+========================= -->
+
+<section id="achievement">
+
+    <div class="box-card achievement-card">
+
+        <h2
+            style="
+                color:var(--blue-dark);
+                font-size:32px;
+            "
+        >
+            Achievement
+        </h2>
+
+
+        <div class="achievement">
+
+            <h3>
+                🏆 3rd Position — VulnHunt
+            </h3>
+
+            <p>
+
+                Participated in <b>VULNHUNT</b> at
+                <b>SPARTANZ 3.0 2K26</b>, a National Level
+                Technical Symposium organized by the Department
+                of CSE (Cyber Security) at New Prince College.
+
+            </p>
+
+            <p>
+
+                Secured <b>3rd Position</b> in the event and
+                received a <b>₹300 cash prize</b>.
+
+            </p>
+
+            <span class="achievement-highlight">
+                📅 September 26, 2026
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<div class="contact">
+
+    <h2
+        style="
+            color:var(--blue-dark);
+            font-size:32px;
+        "
+    >
+        Contact
+    </h2>
+
+
+    <div class="icons">
+
+
+        <a
+            class="icon"
+            href="https://github.com/Madhumathi-2009"
+            target="_blank"
+            title="GitHub"
+        >
+            <i class="fab fa-github"></i>
+        </a>
+
+
+        <a
+            class="icon"
+            href="https://www.linkedin.com/in/madhumathi-c"
+            target="_blank"
+            title="LinkedIn"
+        >
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+
+
+        <a
+            class="icon"
+            href="https://x.com/CMadhumathi2009"
+            target="_blank"
+            title="X"
+        >
+            <i class="fab fa-x-twitter"></i>
+        </a>
+
+
+        <a
+            class="icon"
+            href="https://www.kaggle.com/cmadhumathi2009"
+            target="_blank"
+            title="Kaggle"
+        >
+            <i class="fab fa-kaggle"></i>
+        </a>
+
+
+        <a
+            class="icon"
+            href="https://www.instagram.com/c._.madhumathi/?__pwa=1"
+            target="_blank"
+            title="Instagram"
+        >
+            <i class="fab fa-instagram"></i>
+        </a>
+
+
+        <a
+            class="icon"
+            href="mailto:madhu12lakshmi@gmail.com"
+            title="Email"
+        >
+            <i class="fas fa-envelope"></i>
+        </a>
+
+
+        <a
+            class="icon"
+            href="https://www.credly.com/earner/dashboard/home"
+            target="_blank"
+            title="Credly"
+        >
+            <i class="fas fa-award"></i>
+        </a>
+
+
+    </div>
+
+
+    <p
+        style="
+            margin-top:20px;
+            font-size:14px;
+            color:var(--blue-dark);
+        "
+    >
+        © 2026 Chandramouli Madhumathi ❄️
+    </p>
+
+</div>
+
+
+<!-- =========================
+     RESUME
+========================= -->
+
+<section id="resume" class="resume">
+
+    <div
+        class="box-card"
+        style="
+            background:
+            linear-gradient(
+                135deg,
+                #F0F9FF,
+                #DBEAFE
+            );
+        "
+    >
+
+        <h2
+            style="
+                color:var(--blue-dark);
+                font-size:32px;
+            "
+        >
+            Resume
+        </h2>
+
+        <a
+            class="btn"
+            href="#"
+            download
+        >
+            📄 Download Resume
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     DARK MODE SCRIPT
+========================= -->
+
+<script>
+
+function toggleTheme(){
+
+    document.body.classList.toggle("dark");
+
+    let button =
+        document.getElementById("theme-btn");
+
+    if(
+        document.body.classList.contains("dark")
+    ){
+
+        button.innerText="☀️";
+
+        button.style.background="#1e293b";
+
+        button.style.color="white";
+
+    }
+
+    else{
+
+        button.innerText="🌙";
+
+        button.style.background="white";
+
+        button.style.color="#0a1931";
+
+    }
+
+}
+
+</script>
+
+
+</body>
+</html>
